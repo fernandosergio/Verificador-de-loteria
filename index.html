@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar números da loteria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h2>Verificar números da loteria</h2>
+        <div class="content" id="content">
+            <div>
+                <div>
+                    <p> Selecione o concurso</p>
+                    <select name="selConcurso" id="selConcurso">
+                <option value="0" label="Seleciona uma opção" selected disabled>0</option>
+                <option value="diadesorte" label="Dia de sorte">31</option>
+                <option value="duplasena" label="Dupla Sena">50</option>
+                <option value="lotofacil" label="Lotofácil">25</option>
+                <option value="lotomania" label="Lotomania">100</option>
+                <option value="megasena" label="Mega-sena">60</option>
+                <option value="quina" label="Quina">80</option>
+                <option value="timemania" label="Timemania">80</option>
+                
+                <!-- <option value="loteca">Loteca</option>
+                <option value="lotogol">Lotogol</option> -->
+                    </select>
+                </div>
+                <div class="barrinha">
+                    <p> Digite o número do concurso</p>
+                    <input type="number" name="numConcurso" id="numConcurso" placeholder="Digite apenas números">
+                </div>
+            </div>
+            <p> Selecione os números apostados</p>
+            <div id="numAposta">
+                Selecione o concurso desejado!
+                <!-- <input type="checkbox" value="01"> -->
+            </div>
+            <br>
+
+        </div>
+        <button name="btnVerificar" id="btnVerificar">Verificar</button>
+        <fieldset>
+            <!-- <legend>Resultado</legend> -->
+            <h4> <u> Resultado</u></h4>
+            <div>
+                <h3>Números acertados</h3>
+
+                <div id="numAcertados">
+                    -
+                </div>
+                <div id="numAcertadosDupla">
+
+                </div>
+            </div>
+
+            <div>
+                <h3>Números errados</h3>
+                <div id="numErrados">
+                    -
+                </div>
+                <div id="numErradosDupla">
+
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <!-- <legend>Total de acertos</legend> -->
+            <h4> <u> Total de acertos</u></h4>
+            <div id="numAcertadosTotal">
+                0
+            </div>
+            <div id="numAcertadosTotalDupla">
+
+            </div>
+        </fieldset>
+    </section>
+
+    <script src="./javascript/jquery-3.5.1.js"></script>
+    <script src="./javascript/busca_api.js"></script>
+    <script src="./javascript/div_apostados.js"></script>
+
+</body>
+
+</html>

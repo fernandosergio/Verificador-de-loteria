@@ -1,0 +1,199 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+/* Fonte */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #AB05F2;
+    color: white;
+}
+
+section {
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 2rem;
+    border-radius: .3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: center;
+}
+
+div.content {
+    text-align: center;
+}
+
+div.content select {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    width: 14rem;
+    font-size: 13pt;
+    padding: .2rem;
+    padding-left: .4rem;
+    border-radius: .3rem;
+    border: 1px solid #dddddd;
+    background-color: #DCE4F2;
+    cursor: pointer;
+}
+
+input#numConcurso {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: .3rem;
+    width: 13rem;
+    height: 1.5rem;
+    font-size: 11pt;
+    border-radius: .3rem;
+    border: 1px solid gray;
+    background-color: #DCE4F2;
+    outline: 0;
+}
+
+div.barrinha {
+    position: relative;
+    margin: 0;
+}
+
+
+/* barrinha no input */
+
+div.barrinha:focus-within::after {
+    content: "";
+    width: 12rem;
+    height: 3px;
+    position: absolute;
+    background-color: #c531d8;
+    left: calc(100% - 63.3%);
+    border-radius: 1.5px;
+    bottom: 0;
+}
+
+
+/* Tira as setas do input */
+
+div.content input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+div.content input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.content input[type=number]:focus {
+    outline: none;
+}
+
+button#btnVerificar {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    margin-top: 2rem;
+    width: 8rem;
+    padding: .3rem;
+    font-size: 12pt;
+    border-radius: .4rem;
+    border: none;
+    background-color: #138AF2;
+    color: white;
+    transition: .3s;
+}
+
+div#numAposta {
+    margin-top: 2rem;
+}
+
+
+/* estilo dos checkbox */
+
+input[type="checkbox"] {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border-radius: 50%;
+    padding-top: .4rem;
+    text-align: center;
+    font-size: 15pt;
+    outline: none;
+}
+
+input:hover[type="checkbox"] {
+    cursor: pointer;
+    background-color: #4FF176;
+    /* background-color: rgb(151, 149, 149); */
+    transition: .3s;
+}
+
+input:checked[type="checkbox"] {
+    background-color: #1edf4e;
+}
+
+input:checked:hover[type="checkbox"] {
+    background-color: #3BB358;
+}
+
+button#btnVerificar:hover {
+    cursor: pointer;
+    background-color: #304cee;
+}
+
+fieldset {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    text-align: center;
+    width: 90%;
+    padding-bottom: 1rem;
+    font-size: 14pt;
+    font-weight: 500;
+    border-radius: .4rem;
+    background-color: white;
+    color: black;
+}
+
+fieldset div {
+    font-weight: 700;
+}
+
+div#numAcertadosTotal,
+div#numAcertadosTotalDupla {
+    font-size: 27pt;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 16pt;
+}
+
+h4 {
+    font-size: 17pt;
+    margin-top: .2rem;
+}
+
+@media(min-width: 1200px) {
+    div.content div {
+        display: inline-flex;
+    }
+    div.content div div {
+        display: table-column;
+    }
+    div .barrinha {
+        margin-left: 3rem;
+        display: table-column;
+    }
+    div#numAposta {
+        display: block;
+    }
+    div.content p {
+        margin-top: 2rem;
+    }
+}
