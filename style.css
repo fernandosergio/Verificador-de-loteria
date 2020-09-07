@@ -27,6 +27,10 @@ h2 {
     text-align: center;
 }
 
+div#margem {
+    margin-bottom: 2.5rem;
+}
+
 div.content {
     text-align: center;
 }
