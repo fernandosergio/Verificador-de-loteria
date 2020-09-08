@@ -196,7 +196,10 @@ h4 {
         grid-column-start: 1;
         grid-column-end: 3;
     }
+    div.barrinha {
+        height: 98px;
+    }
     div.barrinha:focus-within::after {
-        bottom: .57rem;
+        bottom: 9.8%;
     }
 }
