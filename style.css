@@ -197,7 +197,6 @@ h4 {
         grid-column-end: 3;
     }
     div.barrinha:focus-within::after {
-        left: 2.4;
         bottom: .57rem;
     }
 }
