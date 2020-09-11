@@ -158,12 +158,13 @@ fieldset {
     margin-top: 2rem;
     text-align: center;
     width: 90%;
+    max-width: 90%;
     padding-bottom: 1rem;
     font-size: 14pt;
     font-weight: 500;
     border-radius: .4rem;
     background-color: white;
-    color: black;
+    color: #000000e7;
 }
 
 fieldset div {
