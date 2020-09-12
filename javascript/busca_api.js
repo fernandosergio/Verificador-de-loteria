@@ -200,6 +200,58 @@ $(document).ready(function() {
     })
 })
 
+
+// 03 06 10 17 34 37
+
+// Diz se a quantidade de numeros esta correta 
+$(document).on('change', 'input[type="checkbox"]:checked', function() {
+    // Conta quantos inputs tem selecionados
+    inputs = document.querySelectorAll('input[type="checkbox"]:checked')
+    contador = inputs.length
+    console.log(contador)
+
+    // pega o concurso selecionado
+    const filhos = document.getElementById('selConcurso')
+    let opcao = filhos.children[filhos.selectedIndex].value
+
+    // Faz a verificadao de todos os inputs
+    if (opcao == 'diadesorte' && contador >= 7 && contador <= 15) {
+        diadesorte = true
+    } else {
+        diadesorte = false
+    }
+    if (opcao == 'duplasena' && contador >= 6 && contador <= 15) {
+        duplasena = true
+    } else {
+        duplasena = false
+    }
+    if (opcao == 'lotofacil' && contador >= 15 && contador <= 20) {
+        lotofacil = true
+    } else {
+        lotofacil = false
+    }
+    if (opcao == 'lotomania' && contador == 50) {
+        lotomania = true
+    } else {
+        lotomania = false
+    }
+    if (opcao == 'megasena' && contador >= 6 && contador <= 15) {
+        megasena = true
+    } else {
+        megasena = false
+    }
+    if (opcao == 'quina' && contador >= 5 && contador <= 15) {
+        quina = true
+    } else {
+        quina = false
+    }
+    if (opcao == 'timemania' && contador == 10) {
+        timemania = true
+    } else {
+        timemania = false
+    }
+})
+
 function mes(Mes) {
     switch (Mes) {
         case 1:
@@ -265,54 +317,3 @@ function adiciona(elemento, lista) {
         }
     }
 }
-
-// 03 06 10 17 34 37
-
-// Diz se a quantidade de numeros esta correta 
-$(document).on('change', 'input[type="checkbox"]:checked', function() {
-    // Conta quantos inputs tem selecionados
-    inputs = document.querySelectorAll('input[type="checkbox"]:checked')
-    contador = inputs.length
-    console.log(contador)
-
-    // pega o concurso selecionado
-    const filhos = document.getElementById('selConcurso')
-    let opcao = filhos.children[filhos.selectedIndex].value
-
-    // Faz a verificadao de todos os inputs
-    if (opcao == 'diadesorte' && contador >= 7 && contador <= 15) {
-        diadesorte = true
-    } else {
-        diadesorte = false
-    }
-    if (opcao == 'duplasena' && contador >= 6 && contador <= 15) {
-        duplasena = true
-    } else {
-        duplasena = false
-    }
-    if (opcao == 'lotofacil' && contador >= 15 && contador <= 20) {
-        lotofacil = true
-    } else {
-        lotofacil = false
-    }
-    if (opcao == 'lotomania' && contador == 50) {
-        lotomania = true
-    } else {
-        lotomania = false
-    }
-    if (opcao == 'megasena' && contador >= 6 && contador <= 15) {
-        megasena = true
-    } else {
-        megasena = false
-    }
-    if (opcao == 'quina' && contador >= 5 && contador <= 15) {
-        quina = true
-    } else {
-        quina = false
-    }
-    if (opcao == 'timemania' && contador == 10) {
-        timemania = true
-    } else {
-        timemania = false
-    }
-})

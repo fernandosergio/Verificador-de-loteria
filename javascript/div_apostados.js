@@ -12,8 +12,8 @@ $(document).ready(function() {
         contador = 0
 
         // Pega o texto dentro da tag option
-        quantidade = this.children[this.selectedIndex].textContent
-        quantidade = parseInt(quantidade, 10);
+        quantidade = this.children[this.selectedIndex].value
+        quantidade = valores(quantidade)
 
         // Verifica se e maior que 0
         if (quantidade) {
@@ -40,3 +40,33 @@ $(document).ready(function() {
     })
 
 })
+
+function valores(concurso) {
+    switch (concurso) {
+        case 'diadesorte':
+            return 31
+            break;
+        case 'duplasena':
+            return 50
+            break;
+        case 'lotofacil':
+            return 25
+            break;
+        case 'lotomania':
+            return 100
+            break;
+        case 'megasena':
+            return 60
+            break;
+        case 'quina':
+            return 80
+            break;
+        case 'timemania':
+            return 80
+            break;
+
+        default:
+            return 0
+            break;
+    }
+}
