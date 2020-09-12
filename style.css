@@ -190,7 +190,6 @@ footer {
     position: sticky;
     width: 100vw;
     bottom: 0;
-    height: 1.5rem;
     background-color: black;
     font-size: 10pt;
     padding: 0;
@@ -211,11 +210,6 @@ div#centro {
     bottom: 0.2rem;
     left: 50%;
     transform: translate(-50%);
-}
-
-div#footer>p {
-    margin-left: 1rem;
-    margin-top: 0.2rem;
 }
 
 p a {
@@ -241,19 +235,9 @@ p a {
     }
 }
 
-@media(max-width: 850px) {
-    footer {
-        height: 2.8rem;
-    }
-    div#footer {
-        display: block;
-        text-align: center;
-    }
-}
-
 @media(max-width:600px) {
     footer {
         font-size: 8pt;
-        height: 7vh;
+        height: 5vh;
     }
 }
