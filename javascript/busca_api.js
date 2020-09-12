@@ -252,6 +252,14 @@ $(document).on('change', 'input[type="checkbox"]:checked', function() {
     }
 })
 
+$('#numConcurso').focus(function() {
+    $('footer').prop('display', 'none').fadeOut(300)
+})
+
+$('#numConcurso').focusout(function() {
+    $('footer').prop('display', '').fadeIn(300)
+})
+
 function mes(Mes) {
     switch (Mes) {
         case 1:
