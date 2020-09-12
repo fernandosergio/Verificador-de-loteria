@@ -44,6 +44,7 @@ div.content select {
     padding: .2rem;
     padding-left: .4rem;
     border-radius: .3rem;
+    box-shadow: 3px 3px #cecece;
     border: 1px solid #dddddd;
     background-color: #DCE4F2;
     cursor: pointer;
@@ -57,7 +58,8 @@ input#numConcurso {
     height: 1.5rem;
     font-size: 11pt;
     border-radius: .3rem;
-    border: 1px solid gray;
+    border: 0;
+    box-shadow: 3px 3px #cecece;
     background-color: #DCE4F2;
     outline: 0;
 }
@@ -162,9 +164,11 @@ fieldset {
     padding-bottom: 1rem;
     font-size: 14pt;
     font-weight: 500;
+    border: 0;
     border-radius: .4rem;
     background-color: white;
     color: #000000e7;
+    box-shadow: 5px 5px #cecece;
 }
 
 fieldset div {
@@ -184,6 +188,36 @@ h3 {
 h4 {
     font-size: 17pt;
     margin-top: .2rem;
+}
+
+main {
+    padding: 1rem;
+    width: 80%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: #000000e7;
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px #cecece;
+}
+
+main h2 {
+    font-weight: 500;
+}
+
+main p {
+    text-align: justify;
+}
+
+div#quantConc h4 {
+    font-size: 13pt;
+    font-weight: 500;
+}
+
+div#quantConc p {
+    text-indent: 1rem;
+    margin-top: 0;
 }
 
 footer {
