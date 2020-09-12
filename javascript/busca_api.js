@@ -200,15 +200,11 @@ $(document).ready(function() {
     })
 })
 
-
-// 03 06 10 17 34 37
-
 // Diz se a quantidade de numeros esta correta 
 $(document).on('change', 'input[type="checkbox"]:checked', function() {
     // Conta quantos inputs tem selecionados
     inputs = document.querySelectorAll('input[type="checkbox"]:checked')
     contador = inputs.length
-    console.log(contador)
 
     // pega o concurso selecionado
     const filhos = document.getElementById('selConcurso')
