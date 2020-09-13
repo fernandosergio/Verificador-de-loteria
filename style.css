@@ -190,6 +190,9 @@ h4 {
     margin-top: .2rem;
 }
 
+
+/* Caixa abaixo dos resultados */
+
 main {
     padding: 1rem;
     width: 80%;
@@ -219,6 +222,9 @@ div#quantConc p {
     text-indent: 1rem;
     margin-top: 0;
 }
+
+
+/* Rodape preto que fica na pagina inteira */
 
 footer {
     position: sticky;
@@ -250,6 +256,9 @@ p a {
     color: inherit;
 }
 
+
+/* Para dispositivos grandes */
+
 @media(min-width: 1000px) {
     div#container {
         display: grid;
@@ -268,6 +277,9 @@ p a {
         bottom: 9.8%;
     }
 }
+
+
+/* Dispositivos pequenos */
 
 @media(max-width:600px) {
     footer {

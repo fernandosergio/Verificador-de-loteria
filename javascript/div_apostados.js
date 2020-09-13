@@ -41,6 +41,7 @@ $(document).ready(function() {
 
 })
 
+// Quantidade de bolinhas de acordo com o concurso por causa do webview
 function valores(concurso) {
     switch (concurso) {
         case 'diadesorte':

@@ -66,7 +66,7 @@ $(document).ready(function() {
                     dataType: "json",
                     success: function(data) {
 
-
+                        // Variaveis que mostram na tela o resultado
                         const mudaTelaNormal = function() {
                             $('input[type="checkbox"]:checked').prop('checked', false);
 
@@ -90,6 +90,8 @@ $(document).ready(function() {
                             $('#numErradosDupla').html('')
                             $('#numAcertadosTotalDupla').html('')
                         }
+
+                        // Muda a tela para Dupla sena
                         const mudaTelaDupla = function() {
                             $('input[type="checkbox"]:checked').prop('checked', false);
                             $('#numSorteados').html(`1º Sorteio: ${numResultado.split('-')}<br> 2º Sorteio: ${numDupla.split('-')}`)
@@ -121,9 +123,13 @@ $(document).ready(function() {
                             $('#numAcertadosTotal').html(`1º Sorteio: ${acertados.length}`)
                             $('#numAcertadosTotalDupla').html(`<p>2º Sorteio: ${acertadosDupla.length}</p>`)
                         }
+
+                        // Mostra o mês sorteado
                         const mostraMes = function(mesDeSorte) {
                             $('#numErradosDupla').html(`<h3> Mês da sorte</h3><br>${mesDeSorte}`)
                         }
+
+                        // Mosta o time sorteado
                         const mostraTime = function(time) {
                                 $('#numErradosDupla').html(`<h3> Time do coração</h3><br>${time}`)
                             }
@@ -136,9 +142,10 @@ $(document).ready(function() {
                             name = data.data.name
 
                         }
-
+                        // Mostra o mes da sorte
                         if (name == 'diadesorte') {
 
+                            // Formatacao pro lasted ou numero do concurso
                             if (formatoDado) {
                                 var numResultado = data.data[0].resultadoOrdenado
                                 var mesDeSorte = data.data[0].mes_DE_SORTE
@@ -192,10 +199,10 @@ $(document).ready(function() {
                     }
                 })
             } else {
-                alert('Selecione algum número!')
+                alert('Selecione algum número!') // Caso não tenha selecionado número
             }
         } else {
-            alert('Selecione um quantidade de números valida!')
+            alert('Selecione um quantidade de números valida!') // Quantidade de inputs selecionados além do limite do concurso
         }
     })
 })
@@ -248,14 +255,17 @@ $(document).on('change', 'input[type="checkbox"]:checked', function() {
     }
 })
 
+// Some com o footer por causa do webview
 $('#numConcurso').focus(function() {
     $('footer').prop('display', 'none').fadeOut(300)
 })
 
+// Aparece com o footer
 $('#numConcurso').focusout(function() {
     $('footer').prop('display', '').fadeIn(300)
 })
 
+// Formata o mes em número para string
 function mes(Mes) {
     switch (Mes) {
         case 1:
@@ -311,6 +321,7 @@ function compara(numResult, num, acert, errad) {
     }
 }
 
+// Adiciona os elementos na tela
 function adiciona(elemento, lista) {
     elemento.html('')
     for (var i = 0; i < lista.length; i++) {
