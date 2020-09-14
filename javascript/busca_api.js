@@ -39,6 +39,8 @@ $(document).ready(function() {
         inputs = document.querySelectorAll('input[type="checkbox"]:checked')
         contador = inputs.length
 
+        $('#numSelecionados').text(`${contador} números selecionados!`)
+
         // pega o concurso selecionado
         const filhos = document.getElementById('selConcurso')
         let opcao = filhos.children[filhos.selectedIndex].value
@@ -254,7 +256,8 @@ $(document).ready(function() {
 
                     },
                     error: function(error) {
-                        console.log('Não entrou ' + error)
+                        alert('Por favor, verifique o número do concurso e tente novamente!')
+
                     }
                 })
             } else {

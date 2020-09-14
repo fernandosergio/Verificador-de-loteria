@@ -32,7 +32,7 @@
 
 <body>
     <section>
-        <h2>Verificador de resultado da loteria</h2>
+        <h2>Conferir resultado da loteria</h2>
         <div class="content" id="content">
             <div id="container">
                 <div id="margem">
@@ -40,7 +40,8 @@
                     <p>Siga os passos abaixo:</p>
                 </div>
                 <div>
-                    <p> Selecione o concurso</p>
+                    <label for="selConcurso">
+                    <p> Selecione o concurso</p></label>
                     <select name="selConcurso" id="selConcurso">
                 <option value="0" label="Seleciona uma opção" selected disabled>0</option>
                 <option value="diadesorte" label="Dia de sorte">Dia de sorte</option>
@@ -53,10 +54,11 @@
                 
                 <!-- <option value="loteca">Loteca</option>
                 <option value="lotogol">Lotogol</option> -->
-                    </select>
+                </select>
                 </div>
                 <div class="barrinha">
-                    <p> Digite o número do concurso</p>
+                    <label for="numConcurso">
+                    <p> Digite o número do concurso</p></label>
                     <input type="number" name="numConcurso" id="numConcurso" placeholder="Ex: 2000">
                 </div>
             </div>
@@ -67,6 +69,7 @@
             <br>
 
         </div>
+        <p id="numSelecionados">0 números selecionados</p>
         <button name="btnVerificar" id="btnVerificar">Verificar</button>
         <fieldset>
             <!-- <legend>Total de acertos</legend> -->
