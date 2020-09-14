@@ -285,9 +285,8 @@ p a {
 
 .modal {
     width: 30%;
-    height: 20%;
+    height: 12rem;
     min-width: 15rem;
-    min-height: 9rem;
     background-color: white;
     color: black;
     padding: 1rem;
