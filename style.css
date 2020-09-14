@@ -233,10 +233,10 @@ div#quantConc p {
 }
 
 
-/* Rodape preto que fica na pagina inteira */
+/* Rodapé preto que fica na pagina inteira */
 
 footer {
-    position: sticky;
+    position: fixed;
     width: 100vw;
     bottom: 0;
     background-color: black;
