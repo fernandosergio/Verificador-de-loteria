@@ -1,9 +1,9 @@
-// Variaveis para manipulção
+// Variáveis para manipulação
 var numeros = [];
 var acertados = [];
 var errados = [];
 
-// Variaveis da duplasena
+// Variáveis da dupla sena
 var acertadosDupla = [];
 var erradosDupla = [];
 
