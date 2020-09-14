@@ -3,14 +3,19 @@
 
 /* Fonte */
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
     background-color: #AB05F2;
     color: white;
-    box-sizing: border-box;
 }
 
 section {
@@ -151,7 +156,8 @@ button#btnVerificar {
     transition: .3s;
 }
 
-button#btnVerificar:hover {
+button#btnVerificar:hover,
+button#fechar:hover {
     cursor: pointer;
     background-color: #304cee;
 }
@@ -257,6 +263,67 @@ div#centro {
 
 p a {
     color: inherit;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    width: 30%;
+    height: 20%;
+    min-width: 15rem;
+    min-height: 9rem;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    box-shadow: 0 0 0 2px #cecece;
+    text-align: center;
+    position: relative;
+}
+
+.mostrar .modal {
+    animation: .3s modal;
+}
+
+#fechar {
+    position: absolute;
+    width: 5rem;
+    padding: .5rem;
+    bottom: .4rem;
+    left: 50%;
+    border: none;
+    border-radius: .3rem;
+    transform: translate(-50%);
+    background-color: #138AF2;
+    transition: .3s ease;
+    font-size: 1rem;
+    color: white;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
 }
 
 
