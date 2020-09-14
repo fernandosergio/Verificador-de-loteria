@@ -10,6 +10,7 @@ body {
     padding: 0;
     background-color: #AB05F2;
     color: white;
+    box-sizing: border-box;
 }
 
 section {
@@ -36,7 +37,6 @@ div.content {
 }
 
 div.content select {
-    box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     width: 14rem;
@@ -124,9 +124,12 @@ div#numAposta {
 
 input[type="checkbox"] {
     background-color: white;
+    color: black;
     width: 40px;
     height: 40px;
+    -webkit-appearance: none;
     appearance: none;
+    -webkit-border-radius: .3rem;
     border-radius: 50%;
     padding-top: .4rem;
     text-align: center;
@@ -199,6 +202,7 @@ main {
     max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     background-color: white;
     color: #000000e7;
     border-radius: 0.3rem;
