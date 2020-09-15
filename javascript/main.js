@@ -99,12 +99,13 @@ $(document).ready(function() {
         if (concurso == 0) {
             mostraModal('Selecione um concurso', 'Nenhum concurso foi selecionado!')
         } else {
+            // Verifica se foi selecionado algum input
             if (inputs.length) {
                 // Verifica se os numeros selecionados estão na quantidade correta
                 if (diadesorte || duplasena || lotofacil || lotomania || megasena || quina || timemania) {
 
-                    // Verifica se foi selecionado algum input
-
+                    // Animação de loading
+                    $('.c-loader').addClass('mostrar')
 
                     // Pega os numeros selecionados do input para outra variavel
                     for (let i = 0; i < inputs.length; i++) {
@@ -128,8 +129,8 @@ $(document).ready(function() {
                         type: "get",
                         dataType: "json",
                         success: function(data) {
-
-                            // Variaveis que mostram na tela o resultado
+                            $('.c-loader').removeClass('mostrar')
+                                // Variaveis que mostram na tela o resultado
                             const mudaTelaNormal = function() {
                                 $('input[type="checkbox"]:checked').prop('checked', false);
 
@@ -258,6 +259,7 @@ $(document).ready(function() {
 
                         },
                         error: function(error) {
+                            $('.c-loader').removeClass('mostrar')
                             mostraModal('Erro na aplicação', 'Por favor, verifique o número do concurso e tente novamente!')
 
                         }
@@ -284,40 +286,28 @@ function mes(Mes) {
     switch (Mes) {
         case 1:
             return 'Janeiro'
-            break;
         case 2:
             return 'Fevereiro'
-            break
         case 3:
             return 'Março'
-            break
         case 4:
             return 'Abril'
-            break
         case 5:
             return 'Maio'
-            break
         case 6:
             return 'Junho'
-            break
         case 7:
             return 'Julho'
-            break
         case 8:
             return 'Agosto'
-            break
         case 9:
             return 'Setembro'
-            break
         case 10:
             return 'Outubro'
-            break
         case 11:
             return 'Novembro'
-            break
         case 12:
             return 'Dezembro'
-            break
         default:
             console.log('Deu erro no switch do Mes()')
             break;

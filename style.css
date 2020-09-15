@@ -143,6 +143,23 @@ input:checked:hover[type="checkbox"] {
     background-color: #3BB358;
 }
 
+.c-loader {
+    animation: loading 1.2s linear infinite;
+    border: 6px solid #e5e5e5;
+    border-top-color: #51d4db;
+    border-radius: 50%;
+    display: none;
+    height: 30px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 30px;
+}
+
+.c-loader.mostrar {
+    display: block;
+}
+
 button#btnVerificar {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -322,6 +339,12 @@ p a {
     to {
         transform: translate3d(0, 0, 0);
         opacity: 1;
+    }
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
     }
 }
 
