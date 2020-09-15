@@ -85,14 +85,15 @@ $(document).ready(function() {
 
     // Comparar os resultados e mostrar na tela
     $("#btnVerificar").click(function() {
-        // Caso seja feito mais de uma verificacao
-        if (numeros.length) {
-            acertados = []
-            errados = []
-            numeros = []
-            acertadosDupla = []
-            erradosDupla = []
-        }
+        // Reseta os valores
+
+        acertados = [];
+        errados = [];
+        numeros = [];
+        acertadosDupla = [];
+        erradosDupla = [];
+        inputs = document.querySelectorAll('input[type="checkbox"]:checked')
+
         // Pega os dados para a API
         var concurso = $("#selConcurso").val();
         var numConcurso = $("#numConcurso").val();
@@ -100,14 +101,14 @@ $(document).ready(function() {
             mostraModal('Selecione um concurso', 'Nenhum concurso foi selecionado!')
         } else {
             // Verifica se foi selecionado algum input
-            if (inputs.length) {
-                // Verifica se os numeros selecionados estão na quantidade correta
+            if (inputs.length != 0) {
+                // Verifica se os números selecionados estão na quantidade correta
                 if (diadesorte || duplasena || lotofacil || lotomania || megasena || quina || timemania) {
 
                     // Animação de loading
                     $('.c-loader').addClass('mostrar')
 
-                    // Pega os numeros selecionados do input para outra variavel
+                    // Pega os numeros selecionados do input para outra variável
                     for (let i = 0; i < inputs.length; i++) {
                         numeros[i] = inputs[i].value
                     }
