@@ -130,6 +130,9 @@ $(document).ready(function() {
                         type: "get",
                         dataType: "json",
                         success: function(data) {
+                            var posicao = $('fieldset#campo').position().top
+                            posicao = posicao - 40
+                            console.log(posicao)
                             $('.c-loader').removeClass('mostrar')
                                 // Variaveis que mostram na tela o resultado
                             const mudaTelaNormal = function() {
@@ -154,6 +157,7 @@ $(document).ready(function() {
                                 $('#numAcertadosDupla').html('')
                                 $('#numErradosDupla').html('')
                                 $('#numAcertadosTotalDupla').html('')
+                                $('html,body').animate({ scrollTop: posicao }, 1000)
                             }
 
                             // Muda a tela para Dupla sena
@@ -187,6 +191,7 @@ $(document).ready(function() {
 
                                 $('#numAcertadosTotal').html(`1º Sorteio: ${acertados.length}`)
                                 $('#numAcertadosTotalDupla').html(`<p>2º Sorteio: ${acertadosDupla.length}</p>`)
+                                $('html,body').animate({ scrollTop: posicao }, 1000)
                             }
 
                             // Mostra o mês sorteado
