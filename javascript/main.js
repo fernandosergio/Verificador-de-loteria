@@ -282,8 +282,10 @@ $(document).ready(function() {
     // $('#numConcurso').click(function() {
     //     mostraModal('opa', 'texto')
     // })
-    $('#modal-container').click(function() {
-        $('#modal-container').removeClass('mostrar')
+
+    $('#modal-container').click((e) => {
+        if (e.target.id == 'modal-container' || e.target.id == 'fechar')
+            $('#modal-container').removeClass('mostrar')
     })
 })
 
