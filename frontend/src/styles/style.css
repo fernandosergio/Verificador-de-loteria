@@ -1,0 +1,375 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+/* Fonte */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    background-color: #AB05F2;
+    color: white;
+}
+
+section {
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 2rem;
+    border-radius: .3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: center;
+}
+
+div#margem {
+    margin-bottom: 2.5rem;
+}
+
+div.content {
+    text-align: center;
+}
+
+div.content #selConcurso {
+    width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    color: black;
+}
+
+input#numConcurso {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: .3rem;
+    width: 16rem;
+    height: 1.5rem;
+    font-size: 11pt;
+    border-radius: .3rem;
+    border: 0;
+    box-shadow: 3px 3px #cecece;
+    background-color: #DCE4F2;
+    outline: 0;
+}
+
+div.barrinha {
+    width: 17rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* barrinha no input */
+
+div.barrinha:focus-within::after {
+    content: "";
+    width: calc(17rem - 3rem);
+    height: 3px;
+    position: absolute;
+    background-color: #c531d8;
+    left: 1.5rem;
+    border-radius: 1.5px;
+    bottom: 0;
+}
+
+
+/* Tira as setas do input */
+
+div.content input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+div.content input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.content input[type=number]:focus {
+    outline: none;
+}
+
+div#numAposta {
+    margin-top: 2rem;
+}
+
+
+/* estilo dos checkbox */
+
+input[type="checkbox"] {
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-border-radius: .3rem;
+    border-radius: 50%;
+    padding-top: .4rem;
+    text-align: center;
+    font-size: 15pt;
+    outline: none;
+}
+
+input:hover[type="checkbox"] {
+    cursor: pointer;
+    background-color: #4FF176;
+    /* background-color: rgb(151, 149, 149); */
+    transition: .3s;
+}
+
+input:checked[type="checkbox"] {
+    background-color: #1edf4e;
+}
+
+input:checked:hover[type="checkbox"] {
+    background-color: #3BB358;
+}
+
+.c-loader {
+    animation: loading 1.2s linear infinite;
+    border: 6px solid #e5e5e5;
+    border-top-color: #51d4db;
+    border-radius: 50%;
+    display: none;
+    height: 30px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 30px;
+}
+
+.c-loader.mostrar {
+    display: block;
+}
+
+button#btnVerificar {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    width: 8rem;
+    padding: .3rem;
+    font-size: 12pt;
+    border-radius: .4rem;
+    border: none;
+    background-color: #138AF2;
+    color: white;
+    transition: .3s;
+}
+
+button#btnVerificar:hover,
+button#fechar:hover {
+    cursor: pointer;
+    background-color: #304cee;
+}
+
+fieldset {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    text-align: center;
+    width: 90%;
+    max-width: 90%;
+    padding-bottom: 1rem;
+    font-size: 14pt;
+    font-weight: 500;
+    border: 0;
+    border-radius: .4rem;
+    background-color: white;
+    color: #000000e7;
+    box-shadow: 5px 5px #cecece;
+}
+
+fieldset div {
+    font-weight: 700;
+}
+
+div#numAcertadosTotal,
+div#numAcertadosTotalDupla {
+    font-size: 27pt;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 16pt;
+}
+
+h4 {
+    font-size: 17pt;
+    margin-top: .2rem;
+}
+
+
+/* Caixa abaixo dos resultados */
+
+main {
+    padding: 1rem;
+    width: 80%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    background-color: white;
+    color: #000000e7;
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px #cecece;
+}
+
+main h2 {
+    font-weight: 500;
+}
+
+main p {
+    text-align: justify;
+}
+
+div#quantConc h4 {
+    font-size: 13pt;
+    font-weight: 500;
+}
+
+div#quantConc p {
+    text-indent: 1rem;
+    margin-top: 0;
+}
+
+
+/* Rodapé preto que fica na pagina inteira */
+
+footer {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background-color: black;
+    font-size: 10pt;
+    padding: 0;
+}
+
+div#footer {
+    display: inline-flex;
+    position: relative;
+}
+
+footer p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+div#centro {
+    position: fixed;
+    bottom: 0.2rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+p a {
+    color: inherit;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    width: 30%;
+    height: 12rem;
+    min-width: 15rem;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    box-shadow: 0 0 0 2px #cecece;
+    text-align: center;
+    position: relative;
+}
+
+.mostrar .modal {
+    animation: .3s modal;
+}
+
+#fechar {
+    position: absolute;
+    width: 5rem;
+    padding: .5rem;
+    bottom: .4rem;
+    left: 50%;
+    border: none;
+    border-radius: .3rem;
+    transform: translate(-50%);
+    background-color: #138AF2;
+    transition: .3s ease;
+    font-size: 1rem;
+    color: white;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* Para dispositivos grandes */
+
+@media(min-width: 1000px) {
+    div#container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10vh 10vh;
+    }
+    div#margem {
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    div.barrinha {
+        height: 98px;
+    }
+    div.barrinha:focus-within::after {
+        bottom: 9.8%;
+    }
+}
+
+
+/* Dispositivos pequenos */
+
+@media(max-width:600px) {
+    footer {
+        font-size: 8pt;
+        height: 5vh;
+    }
+}
